@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Snow Village</title>
+<link rel="icon" href="data:,">
+<style>
+html, body { margin: 0; height: 100%; background: #0b1030; color: #fff; font-family: system-ui, sans-serif; overflow: hidden; }
+canvas { display: block; }
+#ui { position: fixed; inset: 0; z-index: 2; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+	background: radial-gradient(circle at 50% 40%, rgba(40, 56, 120, 0.92), rgba(11, 16, 48, 0.97)); }
+h1 { font-size: 52px; margin: 0; letter-spacing: 1px; }
+button { font-size: 30px; padding: 20px 48px; border-radius: 48px; border: 0; background: #e23b3b; color: #fff; cursor: pointer; }
+button:disabled { opacity: 0.4; }
+#desk { font-size: 18px; padding: 10px 26px; background: #2f6b8a; }
+label { font-size: 20px; }
+#msg { opacity: 0.8; max-width: 80%; text-align: center; }
+.help { opacity: 0.6; font-size: 15px; max-width: 520px; text-align: center; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div id="ui">
+	<h1>❄ Snow Village ❄</h1>
+	<button id="vr">Enter VR</button>
+	<label><input type="checkbox" id="music" checked> Music</label>
+	<button id="desk">Play on screen</button>
+	<div id="msg"></div>
+	<div class="help">VR: left stick walks, right stick turns, trigger throws snowballs.<br>Screen: W A S D walks, mouse looks, click throws.</div>
+</div>
+<script src="three.min.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
